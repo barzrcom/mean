@@ -1,0 +1,42 @@
+<mat-toolbar color="primary" dir="rtl">
+  <a routerLink="/" class="link" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">
+    <i class="fa fa-home"></i>
+  </a>
+  <a [hidden]="!(auth.loggedIn && auth.isAdmin)" [matMenuTriggerFor]="adminMenu" class="link">
+    <span>|</span>
+    <i class="fa fa-wrench"></i>
+  </a>
+  <mat-menu #adminMenu="matMenu">
+    <a mat-menu-item routerLink="/users">
+      <i class="fa fa-user"></i>
+      <span> משתמשים</span>
+    </a>
+    <a mat-menu-item routerLink="/connected">
+      <i class="fa fa-plug"></i>
+      <span> מחוברים</span>
+    </a>
+  </mat-menu>
+  <a routerLink="/statistics" class="link" routerLinkActive="active" [hidden]="!auth.loggedIn">
+    <span>|</span>
+    <i class="fa fa-pie-chart"></i>
+  </a>
+
+  <div [hidden]="!auth.loggedIn" class="user-menu">
+    <button mat-icon-button [matMenuTriggerFor]="userMenu" class="link">
+      <i class="fa fa-user"></i>
+    </button>
+    <mat-menu #userMenu="matMenu">
+      <a mat-menu-item routerLink="/account">
+        <i class="fa fa-cog"></i>
+        <span> Settings</span>
+      </a>
+      <a mat-menu-item routerLink="/logout">
+        <i class="fa fa-sign-out"></i>
+        <span> Logout</span>
+      </a>
+    </mat-menu>
+  </div>
+</mat-toolbar>
+
+<router-outlet></router-outlet>
+<br><br>

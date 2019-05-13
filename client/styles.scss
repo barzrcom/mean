@@ -1,0 +1,80 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import 'reset';
+@import 'variables';
+@import '../node_modules/font-awesome/scss/font-awesome';
+@import 'theme';
+@import '~ngx-bar-rating/themes/br-fontawesome-theme.css';
+@import url('https://fonts.googleapis.com/css?family=Heebo:300,400,500,700,900');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,700,900');
+
+* {
+    font-family: 'Open Sans', 'Heebo' ,serif;
+}
+
+body {
+    margin: 0;
+}
+
+.col-centered {
+    float: none;
+    margin: 0 auto;
+}
+
+.center {
+    text-align: center;
+}
+
+
+/* Colors */
+
+.errorCol {
+    color: $errorCol;
+}
+
+
+/* MATERIAL OVERRIDES */
+
+
+/* MatSnackbar */
+
+.mat-snack-bar-container.success {
+    background-color: $successCol;
+    color: $whiteCol;
+}
+
+.mat-snack-bar-container.danger {
+    background-color: $errorCol;
+    color: $whiteCol;
+}
+
+.mat-snack-bar-container.primary {
+    background-color: $primaryCol;
+    color: $whiteCol;
+}
+
+.mat-simple-snackbar-action {
+    color: $whiteCol;
+}
+
+.mat-table {
+    overflow: auto;
+    max-height: 500px;
+}
+
+#app-table {
+    padding-top: 0px;
+    padding-right: 0px;
+    padding-left: 0px;
+    display: block;
+    max-width: 100%;
+}
+
+.logo{
+    align-content: center;
+    display: block;
+    height: 40px;
+    margin-left: auto;
+    margin-right: auto;
+}
+

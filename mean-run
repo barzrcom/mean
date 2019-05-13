@@ -1,0 +1,6 @@
+#!/bin/bash
+# file: run
+
+nohup node dist/server/app.js &
+nohup ng serve --proxy-config proxy.conf.json --open &
+sudo nohup socat tcp-listen:80,reuseaddr,fork tcp:localhost:4200 &

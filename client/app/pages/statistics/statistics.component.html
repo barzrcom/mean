@@ -1,0 +1,41 @@
+<app-loading [condition]="isLoading"></app-loading>
+
+<app-toast [message]="toast.message"></app-toast>
+<!-- asset -->
+<div [hidden]="isLoading" class="container">
+  <app-page-header [title]="title"></app-page-header>
+  <div class="row">
+    <ngx-charts-pie-chart
+      [view]="view"
+      [scheme]="colorScheme"
+      [results]="singlePie"
+      [legend]="showLegend"
+      [explodeSlices]="explodeSlices"
+      [labels]="showLabels"
+      [doughnut]="doughnut"
+      [gradient]="gradient"
+      (select)="onSelectPie($event)">
+    </ngx-charts-pie-chart>
+  </div>
+  
+  <br/><br/><br/>
+  <div class="row">
+    <ngx-charts-bar-vertical
+      [view]="view"
+      [scheme]="colorScheme"
+      [results]="singleBar"
+      [gradient]="gradient"
+      [xAxis]="showXAxis"
+      [yAxis]="showYAxis"
+      [legend]="showLegend"
+      [showXAxisLabel]="showXAxisLabel"
+      [showYAxisLabel]="showYAxisLabel"
+      [xAxisLabel]="xAxisLabel"
+      [yAxisLabel]="yAxisLabel"
+      (select)="onSelectBar($event)">
+    </ngx-charts-bar-vertical>
+  </div>
+  
+</div>
+
+ 

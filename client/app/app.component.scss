@@ -1,0 +1,29 @@
+@import '../variables';
+.link {
+    color: $whiteCol;
+    text-decoration: none;
+    &:hover {
+        color: white;
+    }
+
+}
+
+.links-group {
+    margin: 0 10px;
+    .link {
+        font-size: $font-regular;
+    }
+}
+
+.user-menu {
+    position: absolute;
+    left: 0;
+    i {
+        font-size: $font-regular;
+    }
+}
+
+.fa{
+    margin-left:5px;
+    margin-right: 5px;
+}

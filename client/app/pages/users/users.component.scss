@@ -1,0 +1,21 @@
+@import '../../../variables';
+
+.page-header {
+    margin: 30px;
+    font-size: $font-large;
+    text-align: center;
+    font-weight: bold;
+    color: $accentCol;
+}
+
+.pipes{
+  white-space: pre-wrap;
+  color: $primaryCol;
+}
+
+.mat-header-cell {
+  padding-top: 10px;
+  padding-right: 10px;
+  padding-left: 10px;
+  display: block;
+}
