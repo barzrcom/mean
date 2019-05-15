@@ -49,13 +49,4 @@ export class StatisticsComponent implements OnInit  {
     var b = Math.floor(Math.random() * 255);
     return "rgb(" + r + "," + g + "," + b + ")";
   }
-
-  onSelectBar(event) {
-    console.log(event);
-    this.router.navigate(['/assets'], { queryParams: { city: event.name } });
-  }
-  onSelectPie(event) {
-    console.log(event);
-    this.router.navigate(['/assets'], { queryParams: { type: event.name } });
-  }
 }

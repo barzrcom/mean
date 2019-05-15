@@ -7,7 +7,7 @@
 
 ## Run
 ### Development mode
-export MONGODB_URI=mongodb://localhost:27017
+`export MONGODB_URI=mongodb://localhost:27017`<br>
 `npm run dev`: execute MongoDB, Angular build, TypeScript compiler and Express server.
 ### Production mode
 `npm run prod`: run the project with a production bundle and AOT compilation listening at [localhost:3000](http://localhost:3000) 
