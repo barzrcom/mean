@@ -19,12 +19,12 @@
                          [routerLinkActiveOptions]="{ exact:true}">Invoices</a></li>
                     <li><a href="#" routerLink="/suppliers" class="link" routerLinkActive="active"
                          [routerLinkActiveOptions]="{exact:true}" >Suppliers</a></li>
-                    <li><a href="#" routerLink="/" class="link" routerLinkActive="active"
+                    <li><a href="#" routerLink="/statistics" class="link" routerLinkActive="active"
                          [routerLinkActiveOptions]="{exact:true}">Statistics</a></li>
                     <li>
                         
                         <!--USers authorization-->
-                        <a  href="#" [hidden]="!(auth.loggedIn && !auth.isAdmin)" routerLink="/" class="link" routerLinkActive="active" 
+                        <a  [hidden]="!(auth.loggedIn && !auth.isAdmin)" class="link" routerLinkActive="active" 
                         [routerLinkActiveOptions]="{exact:true}"
                         button  [matMenuTriggerFor]="userMenu"
                         >Settings</a>   
@@ -40,7 +40,7 @@
                             </mat-menu>
                             <!--Admin authorization-->
                             
-                            <a  href="#" [hidden]="!(auth.loggedIn && auth.isAdmin)" [matMenuTriggerFor]="adminMenu" routerLink="/" class="link" routerLinkActive="active" 
+                            <a   [hidden]="!(auth.loggedIn && auth.isAdmin)" [matMenuTriggerFor]="adminMenu"  class="link" routerLinkActive="active" 
                             [routerLinkActiveOptions]="{exact:true}"
                             button  [matMenuTriggerFor]="adminMenu"
                             >Settings</a>  

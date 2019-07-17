@@ -78,8 +78,14 @@
               <button mat-icon-button color="warn" class="btn btn-sm btn-danger" (click)="deleteInvoice(invoice)">
                 <i class="fa fa-trash"></i>
               </button>
+              <button mat-icon-button color="" class="btn btn-sm btn-danger" (click)="editInvoicer(invoice)">
+                  <i class="fa fa-edit"></i>
+                </button>
             </mat-cell>
           </ng-container>
+
+ 
+          
 
           <mat-header-row *matHeaderRowDef="displayedColumns; sticky: true;"></mat-header-row>
           <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
