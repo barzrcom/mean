@@ -43,6 +43,28 @@ export class CreateSupplierComponent implements OnInit {
         Validators.pattern('[0-9_-\\s]*')
     ]);
 
+
+    date = new FormControl('', [
+        Validators.required,
+        Validators.minLength(2),
+        Validators.maxLength(30),
+        Validators.pattern('[a-zA-Z0-9_-\\s]*')
+    ]);
+
+    id = new FormControl('', [
+        Validators.required,
+        Validators.minLength(2),
+        Validators.maxLength(30),
+        Validators.pattern('[a-zA-Z0-9_-\\s]*')
+    ]);
+
+    payment = new FormControl('', [
+        Validators.required,
+        Validators.minLength(2),
+        Validators.maxLength(30),
+        Validators.pattern('[a-zA-Z0-9_-\\s]*')
+    ]);
+
     constructor(
         private formBuilder: FormBuilder,
         public toast: ToastComponent,
@@ -56,9 +78,16 @@ export class CreateSupplierComponent implements OnInit {
             supplierName: this.supplierName,
             email: this.email,
             address: this.address,
-            phoneNumber: this.phoneNumber
-        });
-    }
+           phoneNumber: this.phoneNumber,
+           /*  date: this.date,
+            id: this.id,
+            payment: this.payment*/
+            invoiceScheme: this.formBuilder.group({
+                date: this.date,
+                id: this.id,
+                payment: this.payment
+            })
+        })};
 
     register() {
         this.supplierService.addSupplier(this.registerForm.value).subscribe(
