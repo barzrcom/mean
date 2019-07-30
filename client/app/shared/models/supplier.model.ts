@@ -6,6 +6,9 @@ export class Supplier {
     faxNumber: Number;
     email: String;
     createdAt: Date;
-    invoiceScheme: { date:[String],id:[String],
-        payment:[String]}
+    invoiceScheme: {
+        date: String,
+        id: String,
+        payment: String
+    };
 }
